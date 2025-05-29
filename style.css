@@ -1,0 +1,70 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px); /* 10x10 격자 */
+    grid-gap: 2px;
+    margin-bottom: 10px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none; /* 텍스트 선택 방지 */
+}
+
+.cell.revealed {
+    background-color: #eee;
+    border-color: #999;
+}
+
+.cell.mine {
+    background-color: red;
+    color: white;
+}
+
+.cell.flagged {
+    background-color: yellow;
+}
+
+#message {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#reset-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#reset-button:hover {
+    background-color: #0056b3;
+}
