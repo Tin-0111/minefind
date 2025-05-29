@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>간단한 지뢰찾기</title>
+    <title>지뢰찾기</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>지뢰찾기</h1>
+        <div class="status">
+            <div>시간: <span id="timer">0</span> 초</div>
+            <div>남은 지뢰: <span id="mines-left"></span></div>
+        </div>
         <div id="board"></div>
         <div id="message"></div>
         <button id="reset-button">다시 시작</button>
